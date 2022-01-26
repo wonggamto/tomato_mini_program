@@ -1,0 +1,25 @@
+<!--pages/test/test.wxml-->
+<text id="div-{{classNumber}}">{{message}}</text>
+
+<text wx:if="{{visibled}}">你可以看见我吗？</text>
+
+<text wx:else>你？</text>
+
+
+<view wx:for="{{array}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+  我是index：{{index}}我是ID：{{item.ID}},我是text：{{item.text}}
+</view>
+==================================================
+<view>{{str}}</view>
+<button bindtap="reversStr">反转</button>
+==================================================
+<view wx:for="{{arr}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+  index:{{index}},item:{{item}}
+</view>
+<button bindtap="pushArr">push 一个元素</button>
+==================================================
+<view>{{obj.id}}:{{obj.text}}</view>
+<button bindtap="changeObj">修改对象的值</button>
+==================================================
+<view class="{{active?'active':''}}">改变标签的class</view>
+<button bindtap="changeClass">改变标签的class</button>
